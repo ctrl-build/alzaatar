@@ -91,14 +91,12 @@ export default function BrandIntroduction() {
                 style={{ transitionDelay: "0.4s", lineHeight: "1.6" }}
               >
                 <p className="mb-4">
-                  Într-un cadru de o arhitectură maiestuoasă, aducem reputația
-                  internațională și bogăția de arome ale bucătăriei libaneze.
-                  Spunem povești cu iz oriental prin preparate delicioase, pline
-                  de arome exotice.
+                  Într-o locație cu arhitectură maiestuoasă, spunem povești cu iz oriental și îți delectăm
+                  papilele gustative cu preparate delicioase, pline de arome exotice.
                 </p>
                 <p>
-                  Orientul Mijlociu vă așteaptă aici, la câțiva pași de Centrul
-                  Vechi al Craiovei.
+                  Orientul Mijlociu te așteaptă foarte aproape de Centrul Vechi al Craiovei și la numai
+                  câțiva pași de Parcul Romanescu.
                 </p>
               </div>
 

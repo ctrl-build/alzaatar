@@ -74,7 +74,7 @@ export default function Navigation() {
     <>
       <nav
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-          isScrolled
+          isScrolled || (isHomepage && isMegaMenuOpen)
             ? "h-[70px] bg-[#181818] shadow-lg"
             : isHomepage
             ? "h-[100px] bg-gradient-to-b from-[#181818]/80 to-transparent"
@@ -257,26 +257,12 @@ export default function Navigation() {
               </div>
             </div>
 
-            <div className="container mx-auto px-8 pb-8 flex gap-6 text-sm">
-              <Link
-                href="/meniu/kcal"
-                className="font-canela text-[#FBF7F0]/50 text-xs font-light hover:text-[#C99A3F] transition-colors"
-              >
-                (vezi și Meniu Kcal)
-              </Link>
-              <Link
-                href="/meniu/oasim"
-                className="font-canela text-[#FBF7F0]/50 text-xs font-light hover:text-[#C99A3F] transition-colors"
-              >
-                (vezi și Meniu Oasim)
-              </Link>
-            </div>
           </div>
       </nav>
 
       <nav
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-          isScrolled
+          isScrolled || (isHomepage && isMegaMenuOpen)
             ? "h-[70px] bg-[#181818] shadow-lg"
             : isHomepage
             ? "h-[100px] bg-gradient-to-b from-[#181818]/80 to-transparent"

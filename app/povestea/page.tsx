@@ -60,9 +60,12 @@ export default function PovesteaPage() {
             Povestea Noastră
           </h1>
           <p className="font-manrope text-[#181818] text-[17px] md:text-lg lg:text-xl leading-relaxed">
-            Într-o locație cu arhitectură maiestuoasă, spunem povești cu iz oriental și aducem pe
-            meleaguri autohtone reputația internațională și bogăția de arome ale bucătăriei libaneze.
-            Orientul Mijlociu vă așteaptă aici, la câțiva pași de Centrul Vechi al Craiovei.
+            Într-o locație cu arhitectură maiestuoasă, spunem povești cu iz oriental și îți delectăm
+            papilele gustative cu preparate delicioase, pline de arome exotice.
+          </p>
+          <p className="font-manrope text-[#181818] text-[17px] md:text-lg lg:text-xl leading-relaxed mt-6">
+            Orientul Mijlociu te așteaptă foarte aproape de Centrul Vechi al Craiovei și la numai
+            câțiva pași de Parcul Romanescu.
           </p>
         </div>
       </header>
@@ -98,8 +101,8 @@ export default function PovesteaPage() {
           <div className="font-manrope text-[#181818] text-[17px] md:text-lg leading-relaxed space-y-6">
             <p>
               Carnea de pui, vită sau oaie, servite cu lipie caldă, proaspătă, pregătită în
-              bucătăria noastră. Faimoasele Manakish-uri sunt gătite după rețete tradiționale în
-              cuptoare de cărămidă.
+              bucătăria noastră, te fac să te lingi pe degete datorită ierburilor și mirodeniilor
+              speciale pe care le folosim.
             </p>
 
             <p>
@@ -135,15 +138,43 @@ export default function PovesteaPage() {
 
           <div className="font-manrope text-[#181818] text-[17px] md:text-lg leading-relaxed space-y-6">
             <p>
-              Veniți de pe meleaguri orientale, maeștrii bucătari, în frunte cu celebrul bucătar
-              Fouad, prepară mezze-le tradițional libaneze folosind ingrediente aduse din Liban, de
-              cea mai bună calitate.
+              Al' Zaátar este un restaurant care dorește să aducă pe meleaguri autohtone atât
+              reputația internațională și bogăția de arome îmbietoare ale bucătăriei libaneze cât și
+              elementele arhitecturale care creează un cadru specific oriental.
+            </p>
+
+            <p>
+              Veniți de pe meleaguri orientale, maeștrii bucătari vor prepara mezze-le tradițional
+              libaneze folosind ingrediente aduse din Liban, de cea mai bună calitate.
             </p>
 
             <p>
               Masa tipic libaneză, compusă dintr-o varietate de mezze reci și calde, se completează
-              cu deliciosul kebab. Explozia de legume... Faimoasele Manakish-uri... și delicioasele
-              deserturi kashta, kunafe și kataif...
+              cu delicioasa carne de vită, pui sau miel la grătar, binecunoscutul kebab. Stârnirea
+              apetitului poate începe cu un arak, un lichior de anason, băutură tradițional libaneză.
+              Din mezza rece, nu pot lipsi homos-ul tradițional, baba-ghanouj-ul și moutabal-ul.
+            </p>
+
+            <p>
+              Explozia de legume și vitamina C găsită în salatele libaneze Fattoush și Tabouleh
+              constituie un izvor de sănătate pentru oaspeții noștri.
+            </p>
+
+            <p>
+              Varietatea de preparate se adresează atât gurmanzilor cât și vegetarienilor, datorită
+              diversității de mezze. Cârnaciorii makanek, ras asfour-ul, cotletele de berbecuț, vită
+              și puiul preparate cu condimente speciale libaneze cu siguranță vor fi nelipsite de pe
+              mesele oaspeților noștri.
+            </p>
+
+            <p>
+              Faimoasele Manakish-uri sunt gătite după rețete tradiționale și coapte în cuptoare de
+              cărămidă.
+            </p>
+
+            <p>
+              Prospetimea și delicatețea specifice gastronomiei libaneze vor fi completate de
+              delicioasele deserturi kashta, kunafe și kataif cu kashta.
             </p>
           </div>
         </div>
@@ -216,8 +247,8 @@ export default function PovesteaPage() {
           <div className="font-manrope text-[#181818] text-[17px] md:text-lg leading-relaxed mb-12">
             <p>
               Fie că doriți să luați masa alături de cei dragi, să veniți pentru o întâlnire de
-              afaceri sau să organizați o petrecere privată, echipa Al' Zaátar este pregătită să vă
-              întâmpine cu drag.
+              afaceri sau să organizați o petrecere privată, echipa Al' Zaátar în frunte cu
+              celebrul bucătar Fouad este pregătită să vă întâmpine cu drag.
             </p>
           </div>
 
