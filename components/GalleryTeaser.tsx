@@ -37,8 +37,8 @@ export default function GalleryTeaser() {
   useEffect(() => {
     const checkBreakpoint = () => {
       const width = window.innerWidth;
-      setIsDesktop(width > 1024);
-      setIsTablet(width >= 768 && width <= 1023);
+      setIsDesktop(width >= 1024);
+      setIsTablet(width >= 768 && width < 1024);
       setIsMobile(width < 768);
     };
 
@@ -240,37 +240,64 @@ export default function GalleryTeaser() {
           <div className="space-y-8">
             <div
               ref={swiperRef}
-              className="relative overflow-hidden -mx-4 px-4"
+              className={`grid grid-cols-2 gap-4 md:gap-6 transition-all duration-1000 ${
+                isVisible
+                  ? "opacity-100 translate-y-0"
+                  : "opacity-0 translate-y-8"
+              }`}
+              style={{ transitionDelay: "0.2s" }}
             >
-              <div
-                className="flex transition-transform duration-500 ease-out"
-                style={{
-                  transform: `translateX(-${currentSlide * (100 / 2.5)}%)`,
-                }}
-              >
-                {GALLERY_IMAGES.map((image, index) => (
-                  <div
-                    key={image.id}
-                    className="flex-shrink-0 px-2"
-                    style={{ width: `${100 / 2.5}%` }}
-                  >
-                    <div className="relative aspect-[4/3]">
-                      <Image
-                        src={image.src}
-                        alt={image.alt}
-                        fill
-                        className="object-cover rounded-sm"
-                        onError={(e) => {
-                          e.currentTarget.style.display = "none";
-                        }}
-                      />
-                    </div>
-                  </div>
-                ))}
+              <div className="col-span-2 relative overflow-hidden group cursor-pointer">
+                <div className="relative aspect-[16/9]">
+                  <Image
+                    src={GALLERY_IMAGES[0].src}
+                    alt={GALLERY_IMAGES[0].alt}
+                    fill
+                    className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+                    onError={(e) => {
+                      e.currentTarget.style.display = "none";
+                    }}
+                  />
+                </div>
+              </div>
+
+              <div className="col-span-1 relative overflow-hidden group cursor-pointer">
+                <div className="relative aspect-[4/3]">
+                  <Image
+                    src={GALLERY_IMAGES[1].src}
+                    alt={GALLERY_IMAGES[1].alt}
+                    fill
+                    className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+                    onError={(e) => {
+                      e.currentTarget.style.display = "none";
+                    }}
+                  />
+                </div>
+              </div>
+
+              <div className="col-span-1 relative overflow-hidden group cursor-pointer">
+                <div className="relative aspect-[4/3]">
+                  <Image
+                    src={GALLERY_IMAGES[2].src}
+                    alt={GALLERY_IMAGES[2].alt}
+                    fill
+                    className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+                    onError={(e) => {
+                      e.currentTarget.style.display = "none";
+                    }}
+                  />
+                </div>
               </div>
             </div>
 
-            <div className="text-center">
+            <div
+              className={`text-center transition-all duration-1000 ${
+                isVisible
+                  ? "opacity-100 translate-y-0"
+                  : "opacity-0 translate-y-8"
+              }`}
+              style={{ transitionDelay: "0.4s" }}
+            >
               <Link
                 href="/galerie"
                 className="group/link inline-block font-manrope text-[#FBF7F0] text-base md:text-lg font-bold relative pb-1"
