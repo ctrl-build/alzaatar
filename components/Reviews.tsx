@@ -46,8 +46,8 @@ export default function Reviews() {
   useEffect(() => {
     const checkBreakpoint = () => {
       const width = window.innerWidth;
-      setIsDesktop(width > 1024);
-      setIsTablet(width >= 768 && width <= 1023);
+      setIsDesktop(width >= 1024);
+      setIsTablet(width >= 768 && width < 1024);
       setIsMobile(width < 768);
     };
 
