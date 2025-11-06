@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { MapPin, Clock, Phone, Envelope } from "phosphor-react";
 
@@ -137,18 +137,51 @@ export default function ContactPage() {
     setIsMapActive(true);
   };
 
+  const headerRef = useRef<HTMLDivElement>(null);
+  const [isHeaderVisible, setIsHeaderVisible] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsHeaderVisible(true);
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    if (headerRef.current) {
+      observer.observe(headerRef.current);
+    }
+
+    return () => {
+      if (headerRef.current) {
+        observer.unobserve(headerRef.current);
+      }
+    };
+  }, []);
+
   return (
     <div className="min-h-screen bg-[#FBF7F0] pt-16 md:pt-0">
-      <div className="bg-[#FBF7F0] py-12 md:py-16 px-4 md:px-8">
-        <div className="container mx-auto max-w-7xl">
-          <h1 className="font-canela text-[#181818] text-4xl md:text-5xl lg:text-6xl mb-4 text-center">
+      <header
+        ref={headerRef}
+        className="pt-20 md:pt-32 pb-12 md:pb-16 px-6 md:px-8"
+      >
+        <div
+          className={`max-w-full md:max-w-[720px] mx-auto text-center transition-all duration-1000 ${
+            isHeaderVisible
+              ? "opacity-100 translate-y-0"
+              : "opacity-0 translate-y-8"
+          }`}
+        >
+          <h1 className="font-canela text-[#181818] text-[40px] md:text-6xl lg:text-[64px] font-light mb-8 leading-tight">
             Contact & Rezervări
           </h1>
-          <h2 className="font-manrope text-[#181818]/70 text-xl md:text-2xl text-center">
+          <p className="font-manrope text-[#181818] text-[17px] md:text-lg lg:text-xl leading-relaxed">
             Un loc pregătit pentru oaspeți.
-          </h2>
+          </p>
         </div>
-      </div>
+      </header>
 
       <div className="container mx-auto max-w-7xl px-4 md:px-8 pb-12 md:pb-20">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">

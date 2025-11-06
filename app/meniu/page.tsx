@@ -678,22 +678,52 @@ export default function MeniuPage({ preSelectedCategory }: { preSelectedCategory
     setExpandedCategory(expandedCategory === categoryId ? null : categoryId);
   };
 
+  const headerRef = useRef<HTMLDivElement>(null);
+  const [isHeaderVisible, setIsHeaderVisible] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsHeaderVisible(true);
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    if (headerRef.current) {
+      observer.observe(headerRef.current);
+    }
+
+    return () => {
+      if (headerRef.current) {
+        observer.unobserve(headerRef.current);
+      }
+    };
+  }, []);
+
   return (
     <div className="min-h-screen bg-[#FBF7F0] pt-16 md:pt-0">
-      <div className="bg-[#FBF7F0] py-12 md:py-16 px-4 md:px-8">
-        <div className="container mx-auto max-w-7xl">
-          <h1 className="font-canela text-[#181818] text-4xl md:text-5xl lg:text-6xl mb-4 text-center">
+      <header
+        ref={headerRef}
+        className="pt-20 md:pt-32 pb-12 md:pb-16 px-6 md:px-8"
+      >
+        <div
+          className={`max-w-full md:max-w-[720px] mx-auto text-center transition-all duration-1000 ${
+            isHeaderVisible
+              ? "opacity-100 translate-y-0"
+              : "opacity-0 translate-y-8"
+          }`}
+        >
+          <h1 className="font-canela text-[#181818] text-[40px] md:text-6xl lg:text-[64px] font-light mb-8 leading-tight">
             Meniul Nostru
           </h1>
-          <h2 className="font-manrope text-[#181818]/70 text-xl md:text-2xl mb-6 text-center">
-            Arome Autentice Libaneze
-          </h2>
-          <p className="font-manrope text-[#181818] text-base md:text-lg text-center max-w-3xl mx-auto leading-relaxed">
+          <p className="font-manrope text-[#181818] text-[17px] md:text-lg lg:text-xl leading-relaxed">
             Explorați o varietate de mezze reci și calde, preparate la jar și deserturi gătite cu
             ingrediente proaspete, aduse din Liban.
           </p>
         </div>
-      </div>
+      </header>
 
       {!isMobile ? (
         <div className="flex min-h-screen">

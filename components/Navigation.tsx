@@ -3,6 +3,7 @@
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 import { List, Phone, MapPin, X, ForkKnife } from "phosphor-react";
 
 const MENU_ITEMS = [
@@ -29,6 +30,8 @@ const MENU_CATEGORIES = {
 };
 
 export default function Navigation() {
+  const pathname = usePathname();
+  const isHomepage = pathname === "/";
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isMegaMenuOpen, setIsMegaMenuOpen] = useState(false);
@@ -73,7 +76,9 @@ export default function Navigation() {
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
           isScrolled
             ? "h-[70px] bg-[#181818] shadow-lg"
-            : "h-[100px] bg-gradient-to-b from-[#181818]/80 to-transparent"
+            : isHomepage
+            ? "h-[100px] bg-gradient-to-b from-[#181818]/80 to-transparent"
+            : "h-[100px] bg-[#181818]"
         } hidden lg:block`}
       >
         <div className="container mx-auto h-full px-8 flex items-center justify-between">
@@ -273,7 +278,9 @@ export default function Navigation() {
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
           isScrolled
             ? "h-[70px] bg-[#181818] shadow-lg"
-            : "h-[100px] bg-gradient-to-b from-[#181818]/80 to-transparent"
+            : isHomepage
+            ? "h-[100px] bg-gradient-to-b from-[#181818]/80 to-transparent"
+            : "h-[100px] bg-[#181818]"
         } hidden md:block lg:hidden`}
       >
         <div className="container mx-auto h-full px-8 flex items-center justify-between">
