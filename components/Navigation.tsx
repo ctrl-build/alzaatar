@@ -357,14 +357,15 @@ export default function Navigation() {
       </nav>
 
       <nav className="fixed top-0 left-0 right-0 z-50 h-16 bg-[#181818] flex items-center justify-between px-4 md:hidden">
-        <Link href="/" className="relative h-8 w-auto">
+        <Link href="/" className="relative">
           <Image
             src="/assets/images/logo-mobile.png"
             alt="Al Zaatar"
-            width={40}
-            height={40}
-            className="h-full w-auto object-contain"
+            width={512}
+            height={512}
+            className="h-12 w-auto object-contain"
             priority
+            unoptimized
           />
         </Link>
         <Link

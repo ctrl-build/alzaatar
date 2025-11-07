@@ -155,10 +155,10 @@ export default function Footer() {
                 <span className="absolute bottom-0 left-0 h-[2px] bg-[#C99A3F] w-0 group-hover/link:w-full transition-all duration-300 ease-out" />
               </Link>
               <Link
-                href="mailto:rezervari@alzaatar.ro"
+                href="mailto:contact@alzaatar.ro"
                 className="font-manrope text-[#FBF7F0]/70 hover:text-[#C99A3F] transition-colors duration-300 text-sm md:text-base break-all"
               >
-                rezervari@alzaatar.ro
+                contact@alzaatar.ro
               </Link>
             </div>
           </div>

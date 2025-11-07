@@ -161,10 +161,10 @@ export default function ContactLocation() {
               <div className="flex items-start gap-4">
                 <Envelope className="text-[#C99A3F] text-xl md:text-2xl flex-shrink-0 mt-1" weight="fill" />
                 <Link
-                  href="mailto:Zaatar.restaurant@yahoo.com"
+                  href="mailto:contact@alzaatar.ro"
                   className="font-manrope text-[#FBF7F0] text-base md:text-lg hover:text-[#C99A3F] transition-colors duration-300 break-all"
                 >
-                  Zaatar.restaurant@yahoo.com
+                  contact@alzaatar.ro
                 </Link>
               </div>
             </div>

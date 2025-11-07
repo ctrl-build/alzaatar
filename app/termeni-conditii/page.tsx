@@ -126,8 +126,8 @@ export default function TermeniSiConditii() {
                 Pentru întrebări despre acești Termeni și Condiții, vă rugăm să ne contactați:
               </p>
               <p className="mb-2">
-                <strong>Email:</strong> <a href="mailto:rezervari@alzaatar.ro" className="relative text-[#181818] font-medium hover:text-[#C99A3F] transition-colors inline-block group">
-                  <span className="relative z-10">rezervari@alzaatar.ro</span>
+                <strong>Email:</strong> <a href="mailto:contact@alzaatar.ro" className="relative text-[#181818] font-medium hover:text-[#C99A3F] transition-colors inline-block group">
+                  <span className="relative z-10">contact@alzaatar.ro</span>
                   <span className="absolute bottom-0 left-0 right-0 h-[2px] bg-[#C99A3F] scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
                 </a>
               </p>

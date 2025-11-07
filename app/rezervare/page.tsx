@@ -354,10 +354,10 @@ export default function RezervarePage() {
               <div className="flex items-center gap-3">
                 <Envelope className="text-[#C99A3F] text-xl md:text-2xl" weight="fill" />
                 <a
-                  href="mailto:rezervari@alzaatar.ro"
+                  href="mailto:contact@alzaatar.ro"
                   className="font-manrope text-[#181818] text-base md:text-lg font-medium hover:text-[#C99A3F] transition-colors relative group"
                 >
-                  rezervari@alzaatar.ro
+                  contact@alzaatar.ro
                   <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#C99A3F] transition-all duration-300 group-hover:w-full" />
                 </a>
               </div>
